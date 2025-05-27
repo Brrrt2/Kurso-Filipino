@@ -1,0 +1,235 @@
+body {
+  font-family: "Faculty Glyphic", sans-serif;
+  background: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  padding: 20px;
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or "cover" depending on whether you want cropping or not */
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.amarante-regular {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.faculty-glyphic-regular {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.layunin {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.map-container {
+  position: relative;
+  /* width: 1200px;
+  height: 600px; */
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  background: #e0f7fa;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.map-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;      
+      pointer-events: none;
+      z-index: 1;
+    }
+
+.map-lines line {
+  stroke: #f63737;
+  stroke-width: 2;
+}
+
+.pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: None;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s;
+  z-index:2;
+}
+
+.pin:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 3;
+}
+
+.pin::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.pin:hover::after {
+  opacity: 1;
+}
+
+
+/* .description-box {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+} */
+
+.gold-gradient-text {
+    font-weight: bold;
+    background: linear-gradient(90deg, #b59400, #ffd700, #f5e261, #ffd700, #b59400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  
+}
+
+
+#location-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.description-float {
+  position: absolute;
+  width: 300px;
+  font-size: 0.75rem;
+  text-align: justify;
+  background-color: white;
+  border-radius: 12px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.description-float.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+#routeCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.description-box {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+
+.site-footer {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(5px); /* Optional: frosted glass effect */
+  
+  
+  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  z-index: 10;
+
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.creator-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.creator-list li {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque white */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
