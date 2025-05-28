@@ -7,7 +7,7 @@ const lugarInfo = {
   text: "Si Rizal ay ilang ulit dumaan sa Singapore, una noong 1882 - at muli noong 1887, 1891 at 1896. Namangha siya sa kaayusan ng lungsod at ang kamalayan ng mga tao sa kanilang karapatan. Siya ay naglibot sa Botanical Garden, napuntahan ang Raffles Statue, mga templo at paaralan. Sa huli, itinangka ng kanyang mga tagasuporta na siya'y manatili dito upang maligtas mula sa pagkabilanggo.",
   img: "https://images.pexels.com/photos/29941695/pexels-photo-29941695/free-photo-of-merlion-statue-and-singapore-skyline.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  
   },
-  "Sri Lanka":{ 
+  "Ceylon":{ 
   text: "Noong 1882, huminto si Rizal sa Point de Galle, Ceylon (ngayon ay Sri Lanka), habang lulan ng barkong Djemnah. Nabighani siya sa mga punong palma at sa katahimikan ng paligid. Sa Colombo, napansin nya na maayos na arkitektura at pagkakaiba nito sa Singapore at Maynila. Una ring niya nakita roon ang mga debotong Buddhist.",
   img: "https://www.planetware.com/wpimages/2020/01/sri-lanka-top-attractions-sigiriya.jpg"
   },
@@ -43,7 +43,7 @@ const lugarInfo = {
    text:"Noong 1887, bumisita si Rizal sa Geneva at iba pang bahagi ng Switzerland. Humanga siya sa kagandahan ng mga bundok at lawa, at ginugol ang oras sa pagsusulat at pagmumuni-muni. Naging panandaliang pahingahan ito para sa kanya bago siya bumalik sa mga lungsod na may aktibong kilusang pampulitika.",
   img: "https://images.pexels.com/photos/2399391/pexels-photo-2399391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
-   Macau: {
+  Macau: {
   text:"Noong Pebrero 1888, dumaan si Rizal sa Macau kasama si Jose Maria Basa. Namasyal sila sa mga kalsada, simbahan, at bahay ng mga Intsik. Naitala niya ang mga obserbasyon niya sa kultura, pagkain, at kaayusan ng lungsod at namangha sila sa mga arkitektura rito.",
   img: "https://images.pexels.com/photos/31189636/pexels-photo-31189636/free-photo-of-vibrant-macau-street-view-with-pedestrians.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
@@ -79,7 +79,7 @@ document.querySelectorAll('.pin').forEach(pin => {
 const flags = {
   "Pilipinas": "https://flagcdn.com/w40/ph.png",
   "Singapura": "https://flagcdn.com/w40/sg.png",
-  "Sri Lanka": "https://flagcdn.com/w40/lk.png",
+  "Ceylon": "https://flagcdn.com/w40/lk.png",
   "Yemen": "https://flagcdn.com/w40/ye.png",
   "Italya": "https://flagcdn.com/w40/it.png",
   "Pransya": "https://flagcdn.com/w40/fr.png",
@@ -138,3 +138,115 @@ document.addEventListener('click', (e) => {
     card.classList.remove("show");
   }
 });
+
+const timeline = {
+  Pilipinas: "Sa Pilipinas nagsimula at nagtapos ang makasaysayang paglalakbay ni Rizal. Umalis siya ng Maynila noong Mayo 3, 1882 upang mag-aral sa Europa. Bumalik siya noong 1892, at dito rin siya ipinatapon at kalaunan ay binitay sa Bagumbayan.",
+  
+  Singapura: "Si Rizal ay dumaan sa Singapore sa kanyang unang paglalakbay sa Europa. Namangha siya sa kaayusan at kalinisan ng lungsod. Isinulat niya ang kanyang obserbasyon sa kanyang talaarawan.",
+  
+  Ceylon: "Dumaan si Rizal sa Ceylon (ngayon ay Sri Lanka) papuntang Europa. Tumigil siya sa Point Galle at namangha sa natural na tanawin ng isla. Ipinahayag niya ang paghanga sa disiplina ng mga tao roon.",
+  
+  Yemen: "Isa sa mga hintuan ni Rizal sa kanyang paglalakbay patungong Europa. Dito ay naranasan niya ang hirap ng paglalakbay sa disyerto at ang init ng klima. Ipinakita rin dito ang dedikasyon niyang maabot ang kanyang mga layunin.",
+  
+  Italya: "Namasyal si Rizal sa Naples at iba pang bahagi ng Italya. Napahanga siya sa kasaysayan at arkitektura ng lungsod. Ang Italya ang unang hakbang niya sa lupaing Europeo.",
+  
+  Pransya: "Nag-aral at nanirahan si Rizal sa Paris, France. Pinag-aralan niya ang medisina at tumutok sa pag-oobserba sa mga ospital at klinika. Muli rin siyang bumalik dito upang ipagpatuloy ang kanyang pagsusulat.",
+  
+  Espanya: "Dito siya nag-aral sa Universidad Central de Madrid. Kumuha siya ng kursong medisina at pilosopiya. Sa Espanya rin nahubog ang kanyang diwang makabayan at radikal na kaisipan.",
+  
+  Alemanya: "Dito niya natapos ang kanyang nobelang Noli Me Tangere. Nag-aral siya sa Heidelberg at nagpursige sa larangan ng optalmolohiya. Sa Berlin, nakatagpo siya ng mga tagasuporta at intelektwal na tumulong sa kanya.",
+  
+  Switzerland: "Namasyal si Rizal sa Switzerland at namuhay ng simple. Kasama si Maximo Viola, nilibot niya ang mga lungsod at bundok. Nagpahinga rin siya dito pagkatapos ng kanyang pagsusulat sa Alemanya.",
+  
+  Hong_Kong: "Nanirahan dito si Rizal bago bumalik sa Pilipinas. Isinulat niya kay Blumentritt na ang lungsod ay maliit ngunit malinis. Dito niya rin isinasaalang-alang ang kaligtasan ng kanyang pagbabalik sa bayan.",
+  
+  Macau: "Dumaan si Rizal sa Macau kasama si Basa. Namasyal siya sa mga templo at iba pang tanawin. Pinagmasdan niya ang kultura at buhay ng mga lokal.",
+  
+  Hapon: "Nahumaling si Rizal sa kultura ng Hapon at nagkaroon ng pag-iibigan. Humanga siya sa disiplina, kalinisan, at kabutihang-asal ng mga Hapon. Isa ito sa mga bansang malapit sa puso niya.",
+  
+  Estados_Unidos: "Tumawid si Rizal sa Amerika pauwi ng Pilipinas. Dumaan siya sa San Francisco at New York. Nasaksihan niya ang diskriminasyon laban sa mga Asyano at Itim, na nakaapekto sa kanyang pananaw.",
+  
+  Inglatera: "Nag-aral at nagsaliksik si Rizal sa British Museum. Pinag-aralan niya ang kasaysayan ng Pilipinas gamit ang mga sinaunang dokumento. In-annotate niya ang *Sucesos de las Islas Filipinas* ni Antonio de Morga.",
+  
+  Belhika: "Dito isinulat ni Rizal ang El Filibusterismo. Natapos niya ito sa Biarritz sa bahay ng kaibigang si Boustead. Ang nobela ay mas madilim at radikal kumpara sa Noli Me Tangere."
+};
+
+
+
+document.querySelectorAll('.pin').forEach(pin => {
+  pin.addEventListener('click', () => {
+    const label = pin.dataset.label;
+    const info = timeline[label.replaceAll(" ", "_")]; // Converts "United States" to "United_States"
+    
+    document.getElementById("timeline-description-box").innerHTML = `
+      <p><strong>${label}</strong>: ${info || "Walang impormasyon."}</p>
+    `;
+  });
+});
+
+
+function slowScrollUntilEnd(divId) {
+  const element = document.getElementById(divId);
+  if (!element) return;
+
+  setTimeout(() => {
+    const startScrollPos = window.pageYOffset;
+    const rect = element.getBoundingClientRect();
+    const elementTopAbsolute = startScrollPos + rect.top;
+    const elementHeight = rect.height;
+
+    const maxScrollPos = elementTopAbsolute + elementHeight - window.innerHeight;
+    if (maxScrollPos <= startScrollPos) return; // no scrolling needed
+
+    const speed =1; // pixels per frame
+    let currentScroll = startScrollPos;
+    let isScrolling = true;
+
+    function stopScrolling() {
+      isScrolling = false;
+      // Remove user scroll listeners when stopping
+      window.removeEventListener('wheel', stopScrolling);
+      window.removeEventListener('touchmove', stopScrolling);
+      window.removeEventListener('keydown', stopScrolling);
+      window.removeEventListener('scroll', onScrollCheck);
+    }
+
+    // Optional: also stop if user scrolls faster than auto-scroll
+    function onScrollCheck() {
+      if (Math.abs(window.pageYOffset - currentScroll) > 5) {
+        stopScrolling();
+      }
+    }
+
+    // Listen for user scroll interactions
+    window.addEventListener('wheel', stopScrolling, { passive: true });
+    window.addEventListener('touchmove', stopScrolling, { passive: true });
+    window.addEventListener('keydown', stopScrolling, { passive: true });
+    window.addEventListener('scroll', onScrollCheck, { passive: true });
+
+    function step() {
+      if (!isScrolling) return;
+      currentScroll += speed;
+      if (currentScroll >= maxScrollPos) {
+        window.scrollTo(0, maxScrollPos);
+        stopScrolling();
+        return;
+      }
+      window.scrollTo(0, currentScroll);
+      requestAnimationFrame(step);
+    }
+
+    step();
+  }, 500); // wait for initial jump
+}
+
+// Attach event listener on the compass link
+const compassLink = document.querySelector('a[href="#gallery"]');
+
+if (compassLink) {
+  compassLink.addEventListener('click', () => {
+    slowScrollUntilEnd('gallery');
+  });
+}
+
+

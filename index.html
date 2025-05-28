@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1 class ="gold-gradient-text" style="font-family: 'Amarante', 'serif'; font-size:60px;">Mapa ng Paglalakbay ni Jose Rizal</h1>
+    <h1 id = 'top' class ="gold-gradient-text" style="font-family: 'Amarante', 'serif'; font-size:60px;">Mapa ng Paglalakbay ni Jose Rizal</h1>
     <p class="layunin">
 Ipinapakita ng mapang ito ang mahahalagang lugar na pinuntahan ni Jose Rizal sa loob at labas ng bansa, kung saan niya isinulat ang kanyang mga akda, pinagpatuloy ang pag-aaral, at ipinaglaban ang kalayaan ng Pilipinas.    </p>
 
@@ -48,8 +48,8 @@ Ipinapakita ng mapang ito ang mahahalagang lugar na pinuntahan ni Jose Rizal sa 
             <img src="pin.png" alt="Singapore Pin" /> 
         </div> 
 
-        <div class="pin" style="top:61%; left: 71%;" data-label="Sri Lanka">
-            <img src="pin.png" alt="Sri Lanka Pin" />
+        <div class="pin" style="top:61%; left: 71%;" data-label="Ceylon">
+            <img src="pin.png" alt="Ceylon Pin" />
         </div>
 
         <div class="pin" style="top: 56%; left: 61%;" data-label="Yemen">
@@ -100,15 +100,37 @@ Ipinapakita ng mapang ito ang mahahalagang lugar na pinuntahan ni Jose Rizal sa 
             <img src="pin.png" alt="Germany Pin" />
         </div>
 
+        <a href="#gallery">
+        <div class="compass" style="top: 80%; left: 10%;"  onclick="scrollToSection()">
+            <img src="Compass-1.png"/>
+            <span class="tooltip-text">I-click ito para sa karagdagang impormasyon.</span>
+        </div></a>
+
+
         
         
 
     </div>
 
 
-<!-- <div class="description-box" id="description-box">
+ <div class="timeline-description-box" id="timeline-description-box">
     <p>I-click ang pin upang makita ang detalye ng bawat lugar.</p>
-</div> -->
+</div> 
+
+<div id="gallery" class="image-gallery">
+  <image src="1.jpg"/>
+  <image src="2.jpg"/>
+  <image src="3.jpg"/>
+</div>
+<a href="#top">
+<div class="arrow-container">
+  <img class="arrow" src="arrow.PNG" alt="Arrow Icon" />
+  <p>Bumalik sa taas...</p>
+</div></a>
+
+
+
+
 <div class="description-float card shadow" id="description-box">
   <div class="row g-0">
     <div class="col-md-5">
@@ -122,12 +144,14 @@ Ipinapakita ng mapang ito ang mahahalagang lugar na pinuntahan ni Jose Rizal sa 
     </div>
   </div>
 </div>
+<br>
 
 
   
 
   <script src="script.js"></script>
   <footer class="site-footer">
+    <br>
   <div class="footer-content">
     <p>Created by:</p>
     <ul class="creator-list">

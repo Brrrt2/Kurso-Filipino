@@ -80,7 +80,6 @@ h1 {
   transition: transform 0.2s;
   z-index:2;
 }
-
 .pin:hover {
   transform: translate(-50%, -50%) scale(1.2);
   z-index: 3;
@@ -106,6 +105,53 @@ h1 {
 .pin:hover::after {
   opacity: 1;
 }
+.compass {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  width: 15vw;  /* Responsive width */
+  height: 15vw; /* Keeps it square and responsive */
+  background: None;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s, background 0.2s;
+  z-index: 2;
+}
+
+.compass:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: darkred;
+}
+
+/* Tooltip styling */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 80px;
+  background-color: None;
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 110%; /* position above the compass */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.compass:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 
 
 /* .description-box {
@@ -126,6 +172,10 @@ h1 {
     background-clip: text;
     color: transparent;
   
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
@@ -192,12 +242,12 @@ h1 {
 
 
 .site-footer {
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  background-color: None; /* Semi-transparent white */
   color: white;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   text-align: center;
   font-family: Arial, sans-serif;
-  backdrop-filter: blur(5px); /* Optional: frosted glass effect */
+  /* backdrop-filter: blur(5px); Optional: frosted glass effect */
   
   
   
@@ -213,6 +263,7 @@ h1 {
   max-width: 900px;
   margin: auto;
   padding: 0 20px;
+  color:rgba(0, 0, 0, 0.75);
 }
 
 .creator-list {
@@ -226,10 +277,35 @@ h1 {
 }
 
 .creator-list li {
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque white */
-  color: white;
+  background-color: None; /* Slightly more opaque white */
+  color: rgba(0, 0, 0, 0.75);
   padding: 6px 12px;
   border-radius: 5px;
   white-space: nowrap;
 }
 
+
+.arrow-container {
+  display: flex;
+  align-items: center;     /* vertically center items */
+  justify-content: center; /* horizontally center the whole row */
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.arrow {
+  width: 20px;
+  height: auto;
+}
+
+.arrow-container p {
+  margin: 0;                /* remove default vertical spacing */
+  line-height: 1;           /* keeps it tight and centered */
+}
+a:hover p {
+  color: white;               /* makes the text white on hover */
+}
+a {
+  text-decoration: none;      /* removes underline */
+  color: inherit;             /* uses parent color */
+}
